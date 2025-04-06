@@ -59,6 +59,14 @@ void loop() {
     
     lcd.setCursor(0, 1);
     lcd.print("LED: "); lcd.print(ledState ? "ON " : "OFF");
+  
+    // Exibir no Serial Monitor
+    Serial.print("Temperatura: ");
+    Serial.print(celsius);
+    Serial.print("C | Umidade: ");
+    Serial.print(umidade);
+    Serial.print("% | LED: ");
+    Serial.println(ledState ? "ON" : "OFF");
 
     delay(1000);
 }
